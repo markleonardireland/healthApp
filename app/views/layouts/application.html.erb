@@ -36,16 +36,19 @@
          <div class="container">
             <div class="intro-text">
                <div class="intro-lead-in">
-                  Welcome to the Smart Health<br> Care-Patient Management System
+                  Welcome to the Smart Health<br>Care-Patient Management System
                </div>
             </div>
          </div>
       </header>
       <%= yield %>
    </body>
-   <footer>
+   <footer class="footer">
       <center>
-         <p>x14562027 ~ Mark Leonard ~ Cloud Application Developement</p>
-      </center>
+         <p>
+            x14562027 ~ Mark Leonard ~ Cloud Application Developement ~ <%= "#{start_year} -"if defined? start_year %><%= Date.today.year %>
+         </p>
+   </footer>
+   </center>
    </footer>
 </html>

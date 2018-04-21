@@ -13,6 +13,8 @@ gem 'jquery-datatables-rails'
 gem 'popper_js', '~>1.12.9'
 gem 'jquery-turbolinks'
 gem "clearance"
+# Custom made gem by Mark Leonard
+gem 'illness_age'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record

@@ -1,10 +1,20 @@
+require 'title'
+
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
   # GET /patients
   # GET /patients.json
+def checker
+@input1 = params[:search_string]
+@result = Check.runcheck(@input1)
+flash[:notice] = @result
+redirect_to request.referrer
+end
+
   def index
     @patients = Patient.all
+
   end
 
   # GET /patients/1

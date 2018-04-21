@@ -90,6 +90,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    illness_age (0.0.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -215,6 +216,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   datatables
   devise
+  illness_age
   jbuilder (~> 2.5)
   jquery-datatables-rails
   jquery-rails
