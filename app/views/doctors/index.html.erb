@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+  <body id="page-top">
+    <!-- Navigation -->
+    <center><nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <%= link_to "Patients", patients_path, class:"btn btn-primary" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Clinics", clinics_path, class:"btn btn-primary" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Doctors", doctors_path, class:"btn btn-primary" %>
+            </li>
+          </ul>
+    </nav></center>
+  <h1>Doctors</h1>
+
+<table class="container" id="datatables">
+  <thead>
+    <tr>
+      <th>Doctor Name</th>
+      <th>Speciality</th>
+      <th>ID Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.doctor_name %></td>
+        <td><%= doctor.specialality %></td>
+        <td><%= doctor.id_no %></td>
+        <td><%= link_to 'Show', doctor, class:"btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_doctor_path(doctor), class:"btn btn-info" %></td>
+        <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doctor', new_doctor_path, class:"btn btn-primary text-uppercase js-scroll-trigger" %></center>

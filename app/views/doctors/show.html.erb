@@ -1,0 +1,19 @@
+<center><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Doctor name:</strong>
+  <%= @doctor.doctor_name %>
+</p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @doctor.specialality %>
+</p>
+
+<p>
+  <strong>Id no:</strong>
+  <%= @doctor.id_no %>
+</p>
+
+<%= link_to 'Edit', edit_doctor_path(@doctor), class:"btn btn-primary text-uppercase js-scroll-trigger" %>
+<%= link_to 'Back', doctors_path, class:"btn btn-primary text-uppercase js-scroll-trigger" %></center>

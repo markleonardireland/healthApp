@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+  <body id="page-top">
+    <!-- Navigation -->
+    <center><nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <%= link_to "Patients", patients_path, class:"btn btn-primary" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Clinics", clinics_path, class:"btn btn-primary" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Doctors", doctors_path, class:"btn btn-primary" %>
+            </li>
+          </ul>
+    </nav></center>
+  <h1>Clinics</h1>
+
+<table class="container" id="datatables">
+  <thead>
+    <tr>
+      <th>Clinic name</th>
+      <th>Clinic address</th>
+      <th>Clinic phone</th>
+      <th>Clinic email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinics.each do |clinic| %>
+      <tr>
+        <td><%= clinic.clinic_name %></td>
+        <td><%= clinic.clinic_address %></td>
+        <td><%= clinic.clinic_phone %></td>
+        <td><%= clinic.clinic_email %></td>
+        <td><%= link_to 'Show', clinic, class:"btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_clinic_path(clinic), class:"btn btn-info" %></td>
+        <td><%= link_to 'Destroy', clinic, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic', new_clinic_path, class:"btn btn-primary text-uppercase js-scroll-trigger" %></center>
